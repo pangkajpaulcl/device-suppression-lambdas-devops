@@ -131,12 +131,10 @@ func handler(ctx context.Context, request events.ALBTargetGroupRequest) (events.
 
 	}
 
-	logger.Info(LogMsgTxt[log_msg_is_attributed_invalid_error])
-
 	return events.ALBTargetGroupResponse{
 		Body:              jsonResponse("attributed value not found or invalid", "failed"),
-		StatusCode:        404,
-		StatusDescription: "404 not found",
+		StatusCode:        204,
+		StatusDescription: "204 No Content",
 		IsBase64Encoded:   false,
 		Headers:           map[string]string{"Content-Type": "application/json"}}, nil
 

@@ -21,7 +21,7 @@ resource "aws_lambda_function" "adid_postbacks" {
 
   environment {
     variables = {
-      region = var.region
+      region = var.region,
       kinesis_firehose_name = "device_suppression_dev_kinesis",
       sqs_name = "device_suppression_postbacks_development_sqs",
     }

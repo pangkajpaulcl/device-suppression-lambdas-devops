@@ -34,10 +34,10 @@ func firehoseHandler(queryObj []byte) (string, error) {
 	// put data into firehose
 
 	result, err := firehosePutRecordBatch(svc, queryObj)
-	log.Println(result)
+
 	// check put record success or not
 	if err != nil {
-		// logger ==  log print
+		log.Println(result)
 		return "error found while sending data to firehose", err
 	}
 
