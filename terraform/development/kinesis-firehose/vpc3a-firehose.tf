@@ -21,7 +21,7 @@ module "kinesis_firehose" {
   
 
   enable_processing     = true
-  processing_lambda_arn = "arn:aws:lambda:us-east-1:837630247226:function:development-v1-go-adid_postbacks_attributed"
+  processing_lambda_arn = "arn:aws:lambda:us-east-1:837630247226:function:development-v1-go-adid_postbacks_unattributed"
 
   tags = module.global.tags
 }

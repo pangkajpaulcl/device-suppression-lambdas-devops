@@ -1,5 +1,5 @@
 variable "sqs_lambda_function_end"{
-  default = "arn:aws:lambda:us-east-1:837630247226:function:development-v1-go-adid_postbacks_unattributed"
+  default = "arn:aws:lambda:us-east-1:837630247226:function:development-v1-go-adid_postbacks_attributed"
   description = "provide sqs target lambda function arn"
 }
 
