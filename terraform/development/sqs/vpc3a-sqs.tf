@@ -1,5 +1,5 @@
 variable "sqs_lambda_function_end"{
-  default = "arn:aws:lambda:us-east-1:837630247226:function:device_suppression_postbacks_to_kinesis_dev_sqs_consumer"
+  default = "arn:aws:lambda:us-east-1:837630247226:function:development-v1-go-adid_postbacks_unattributed"
   description = "provide sqs target lambda function arn"
 }
 

@@ -94,7 +94,7 @@ module "alb-internal-development" {
 resource "aws_lambda_permission" "with_lb" {
   statement_id  = "AllowExecutionFromlb"
   action        = "lambda:InvokeFunction"
-  function_name = "arn:aws:lambda:us-east-1:837630247226:function:adid_postbacks"
+  function_name = "arn:aws:lambda:us-east-1:837630247226:function:development-v1-go-adid_postbacks"
   principal     = "elasticloadbalancing.amazonaws.com"
   source_arn    = module.alb-internal-development.target_group_arns[1]
 }
@@ -102,6 +102,6 @@ resource "aws_lambda_permission" "with_lb" {
 # attach target group and lambda function
 resource "aws_lb_target_group_attachment" "postback_lambda" {
   target_group_arn = module.alb-internal-development.target_group_arns[1]
-  target_id        = "arn:aws:lambda:us-east-1:837630247226:function:adid_postbacks"
+  target_id        = "arn:aws:lambda:us-east-1:837630247226:function:development-v1-go-adid_postbacks"
   depends_on       = [aws_lambda_permission.with_lb]
 }
